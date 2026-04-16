@@ -4,6 +4,11 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from googletrans import Translator
 import joblib
+import nltk
+
+# Force Render to download the required NLTK dictionaries on startup
+nltk.download('vader_lexicon', quiet=True)
+nltk.download('stopwords', quiet=True)
 
 app = Flask(__name__)
 # Allow your React frontend to connect
