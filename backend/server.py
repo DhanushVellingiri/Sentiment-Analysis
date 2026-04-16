@@ -12,7 +12,7 @@ nltk.download('stopwords', quiet=True)
 
 app = Flask(__name__)
 # Allow your React frontend to connect
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app)
 
 # --- 1. LOAD MODELS & VECTORIZERS ---
 twitter_model = joblib.load('twitter_acc_model.sav')
